@@ -8,30 +8,25 @@ namespace PilgrimFinalDmv
 {
     public class JwtAuthenticationManager
     {
-        private readonly string dmvkey;
-        private readonly string lawkey;
+        private readonly string key;
 
-        private readonly IDictionary<string, string> dmvusers = new Dictionary<string, string>()
-        {{"testdmv", "pass"}};
-
-        private readonly IDictionary<string, string> lawusers = new Dictionary<string, string>()
-        {{"testlaw", "pass"}};
+        private readonly IDictionary<string, string> users = new Dictionary<string, string>()
+        {{"testdmv", "pass"}, {"testlaw", "pass"}};
 
         public JwtAuthenticationManager(string key)
         {
-            this.dmvkey = dmvkey;
-            this.lawkey = lawkey;
+            this.key = key;
         }
 
-        public string AuthenticateDMV(string username, string password)
+        public string Authenticate(string username, string password)
         {
-            if(!dmvusers.Any(u => u.Key == username && u.Value == password))
+            if(!users.Any(u => u.Key == username && u.Value == password))
             {
                 return null;
             }
 
-            JwtSecurityTokenHandler dmvHandler = new JwtSecurityTokenHandler();
-            var dmvKey = Encoding.ASCII.GetBytes(dmvkey);
+            JwtSecurityTokenHandler Handler = new JwtSecurityTokenHandler();
+            var Key = Encoding.ASCII.GetBytes(key);
 
             SecurityTokenDescriptor tokener = new SecurityTokenDescriptor
             {
@@ -42,38 +37,12 @@ namespace PilgrimFinalDmv
 
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(
-                    new SymmetricSecurityKey(dmvKey),
+                    new SymmetricSecurityKey(Key),
                     SecurityAlgorithms.HmacSha256Signature)
             };
-            var dmvToken = dmvHandler.CreateToken(tokener);
+            var Token = Handler.CreateToken(tokener);
 
-            return dmvHandler.WriteToken(dmvToken);
-        }
-        public string AuthenticateLAW(string username, string password)
-        {
-            if (!lawusers.Any(u => u.Key == username && u.Value == password))
-            {
-                return null;
-            }
-
-            JwtSecurityTokenHandler lawHandler = new JwtSecurityTokenHandler();
-            var lawKey = Encoding.ASCII.GetBytes(lawkey);
-
-            SecurityTokenDescriptor tokener = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new Claim[]
-                {
-                    new Claim(ClaimTypes.Name, username),
-                }),
-
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(
-                    new SymmetricSecurityKey(lawKey),
-                    SecurityAlgorithms.HmacSha256Signature)
-            };
-            var lawToken = lawHandler.CreateToken(tokener);
-
-            return lawHandler.WriteToken(lawToken);
+            return Handler.WriteToken(Token);
         }
     }
 }

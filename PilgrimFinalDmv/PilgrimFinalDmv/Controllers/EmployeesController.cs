@@ -121,7 +121,7 @@ namespace PilgrimFinalDmv.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("Authorize")]
+        [HttpPost("Login")]
         public IActionResult Authuser([FromBody] User usr)
         {
             var token = jwtAuthenticationManager.Authenticate(usr.username, usr.password);
