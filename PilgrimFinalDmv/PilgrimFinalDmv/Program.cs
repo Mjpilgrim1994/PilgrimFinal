@@ -21,7 +21,6 @@ builder.Services.AddDbContext<pilgrimfinalContext>(
 
 var key = "dmvkeyforauthentication";
 
-
 builder.Services.AddAuthentication(x =>
 {
    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -40,7 +39,6 @@ builder.Services.AddAuthentication(x =>
 });
 
 builder.Services.AddSingleton<JwtAuthenticationManager>(new JwtAuthenticationManager(key));
-
 
 var app = builder.Build();
 

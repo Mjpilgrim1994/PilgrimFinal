@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ namespace PilgrimFinalDmv.Controllers
         }
 
         // GET: api/Drivers
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Driver>>> GetDrivers()
         {
@@ -33,6 +35,7 @@ namespace PilgrimFinalDmv.Controllers
         }
 
         // GET: api/Drivers/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<Driver>> GetDriver(string id)
         {
@@ -52,6 +55,7 @@ namespace PilgrimFinalDmv.Controllers
 
         // PUT: api/Drivers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDriver(string id, Driver driver)
         {
@@ -83,6 +87,7 @@ namespace PilgrimFinalDmv.Controllers
 
         // POST: api/Drivers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Driver>> PostDriver(Driver driver)
         {
@@ -111,6 +116,7 @@ namespace PilgrimFinalDmv.Controllers
         }
 
         // DELETE: api/Drivers/5
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDriver(string id)
         {

@@ -11,7 +11,7 @@ namespace PilgrimFinalDmv
         private readonly string key;
 
         private readonly IDictionary<string, string> users = new Dictionary<string, string>()
-        {{"testdmv", "pass"}, {"testlaw", "pass"}};
+        {{"testdmv", "pass"}, {"testlaw", "pass"}, {"test", "test" }};
 
         public JwtAuthenticationManager(string key)
         {

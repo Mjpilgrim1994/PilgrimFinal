@@ -12,12 +12,12 @@ internal class Program
 {
     new KeyValuePair<string, string>("doge", "coin"),
     new KeyValuePair<string, string>("abc", "frqscn"),
-    new KeyValuePair<string, string>("12k", "qrs"),
+    new KeyValuePair<string, string>("abc", "qrs"),
     new KeyValuePair<string, string>("doge", "coin"),
     new KeyValuePair<string, string>("farmnadc", "qrescs"),
     new KeyValuePair<string, string>("gqers", "ddsqerd"),
     new KeyValuePair<string, string>("abc", "mndsa"),
-    new KeyValuePair<string, string>("volkawagen", "Jetta TDI"),
+    new KeyValuePair<string, string>("doge", "Jetta TDI"),
     new KeyValuePair<string, string>("doge", "coin"),
     new KeyValuePair<string, string>("doge", "frqscn")
 };

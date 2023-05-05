@@ -24,6 +24,7 @@ namespace PilgrimFinalDmv.Controllers
         }
 
         // GET: api/DriverInfractions
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DriverInfraction>>> GetDriverInfractions()
         {
@@ -35,6 +36,7 @@ namespace PilgrimFinalDmv.Controllers
         }
 
         // GET: api/DriverInfractions/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<DriverInfraction>> GetDriverInfraction(int id)
         {
@@ -54,6 +56,7 @@ namespace PilgrimFinalDmv.Controllers
 
         // PUT: api/DriverInfractions/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDriverInfraction(int id, DriverInfraction driverInfraction)
         {
@@ -85,6 +88,7 @@ namespace PilgrimFinalDmv.Controllers
 
         // POST: api/DriverInfractions
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<DriverInfraction>> PostDriverInfraction(DriverInfraction driverInfraction)
         {
@@ -99,6 +103,7 @@ namespace PilgrimFinalDmv.Controllers
         }
 
         // DELETE: api/DriverInfractions/5
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDriverInfraction(int id)
         {
