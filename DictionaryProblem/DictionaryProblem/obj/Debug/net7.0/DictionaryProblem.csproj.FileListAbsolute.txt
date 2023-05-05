@@ -1,0 +1,15 @@
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\bin\Debug\net7.0\DictionaryProblem.exe
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\bin\Debug\net7.0\DictionaryProblem.deps.json
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\bin\Debug\net7.0\DictionaryProblem.runtimeconfig.json
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\bin\Debug\net7.0\DictionaryProblem.dll
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\bin\Debug\net7.0\DictionaryProblem.pdb
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\DictionaryProblem.csproj.AssemblyReference.cache
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\DictionaryProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\DictionaryProblem.AssemblyInfoInputs.cache
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\DictionaryProblem.AssemblyInfo.cs
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\DictionaryProblem.csproj.CoreCompileInputs.cache
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\DictionaryProblem.dll
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\refint\DictionaryProblem.dll
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\DictionaryProblem.pdb
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\DictionaryProblem.genruntimeconfig.cache
+C:\Users\Matthew\Desktop\School Assignments\C#2\DictionaryProblem\DictionaryProblem\obj\Debug\net7.0\ref\DictionaryProblem.dll
